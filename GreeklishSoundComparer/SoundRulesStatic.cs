@@ -56,6 +56,7 @@ namespace GreeklishSoundComparer
             doubleSounds["PS"] = PSI;
             doubleSounds["PH"] = FI;
             doubleSounds["KS"] = XI;
+			doubleSounds["CH"] = HI;
             doubleSounds["GG"] = GKOU;
             doubleSounds["OY"] = OY;
             doubleSounds["OU"] = OY;
