@@ -23,7 +23,7 @@ namespace GreeklishSoundComparer
         }
 
         /// <summary>
-        /// 
+        /// Converts implicitly a char to a Sound containing that symbol.
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
@@ -67,6 +67,34 @@ namespace GreeklishSoundComparer
 
             Array.Copy(sound1.soundSymbols,0, soundSymbols, 0, sound1.soundSymbols.Length);
             Array.Copy(sound2.soundSymbols,0, soundSymbols,sound1.soundSymbols.Length, sound2.soundSymbols.Length);
+
+            return new Sound(soundSymbols);
+        }
+
+        /// <summary>
+        /// Combines a series of different sounds into one.
+        /// </summary>
+        /// <returns></returns>
+        public static Sound Append(IEnumerable<Sound> sounds)
+        {
+            /// We need to iterate two times the series 
+            /// Thus we need to evaluate it as a list.
+            var soundList = sounds.ToList();
+
+            int length = 0;
+            foreach (var sound in soundList)
+            {
+                length += sound.soundSymbols.Length;
+            }
+
+            char[] soundSymbols = new char[length];
+
+            int offset = 0;
+            foreach (var sound in soundList)
+            {
+                Array.Copy(sound.soundSymbols, 0, soundSymbols, offset, sound.soundSymbols.Length);
+                offset += sound.soundSymbols.Length;
+            }
 
             return new Sound(soundSymbols);
         }

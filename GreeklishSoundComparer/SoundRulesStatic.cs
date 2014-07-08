@@ -15,34 +15,34 @@ namespace GreeklishSoundComparer
         /// </summary>
         #region MyRegion
 
-        private char ALPHA = 'Α';
-        private char SIGMA = 'Σ';
-        private char DELTA = 'Δ';
-        private char DI = 'D';
-        private char FI = 'Φ';
-        private char GAMMA = 'Γ';
-        private char GKOU = 'G';
-        private char HI = 'Χ';
-        private char JI = 'J';
-        private char KAPPA = 'Κ';
-        private char LAMBDA = 'Λ';
-        private char ZITA = 'Ζ';
-        private char XI = 'Ξ';
-        private char PSI = 'Ψ';
-        private char BETA = 'Β';
-        private char NI = 'Ν';
-        private char MI = 'Μ';
-        private char PI = 'Π';
-        private char OMIKRON = 'Ο';
-        private char IOTA = 'Ι';
-        private char THITA = 'Θ';
-        private char RO = 'Ρ';
-        private char EPSILON = 'Ε';
-        private char TAU = 'Τ';
-        private char BI = '~';
-        private char OY = '!';
-        private char EPSILON_YPSILON = '$';
-        private char ALPHA_YPSILONOY = '#';
+        private const char ALPHA = 'Α';
+        private const char SIGMA = 'Σ';
+        private const char DELTA = 'Δ';
+        private const char DI = 'D';
+        private const char FI = 'Φ';
+        private const char GAMMA = 'Γ';
+        private const char GKOU = 'G';
+        private const char HI = 'Χ';
+        private const char JI = 'J';
+        private const char KAPPA = 'Κ';
+        private const char LAMBDA = 'Λ';
+        private const char ZITA = 'Ζ';
+        private const char XI = 'Ξ';
+        private const char PSI = 'Ψ';
+        private const char BETA = 'Β';
+        private const char NI = 'Ν';
+        private const char MI = 'Μ';
+        private const char PI = 'Π';
+        private const char OMIKRON = 'Ο';
+        private const char IOTA = 'Ι';
+        private const char THITA = 'Θ';
+        private const char RO = 'Ρ';
+        private const char EPSILON = 'Ε';
+        private const char TAU = 'Τ';
+        private const char BI = '~';
+        private const char OY = '!';
+        private const char EPSILON_YPSILON = '$';
+        private const char ALPHA_YPSILONOY = '#';
 
         #endregion
 

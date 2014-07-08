@@ -184,12 +184,15 @@ namespace GreeklishSoundComparer
 
             if (startOfDouble.IndexOf(character) >= 0)
             {
-                foreach (var doubleSound in doubleSounds.Where(p => p.Key[0] == character))
+                Sound allSounds = Sound.Append(doubleSounds.Where(p => p.Key[0] == character).Select(p=>p.Value));
+
+                if (sound != null)
                 {
-                    if (sound != null)
-                    {
-                        sound = Sound.Append(sound, doubleSound.Value);
-                    }
+                    sound = Sound.Append(sound, allSounds);
+                }
+                else
+                {
+                    sound = allSounds;
                 }
             }
 

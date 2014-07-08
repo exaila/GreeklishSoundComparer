@@ -16,6 +16,11 @@ namespace Test
             Assert.IsTrue(SoundComparer.AreSame("Αθήνα", "Athena"));
             Assert.IsTrue(SoundComparer.AreSame("Gilgames G", "Γκιλγγαμες Γ"));
 
+            Assert.IsTrue(SoundComparer.AreSame("", ""));
+            Assert.IsTrue(SoundComparer.AreSame("  ", "  "));
+            Assert.IsFalse(SoundComparer.AreSame("Αθήνα", ""));
+            Assert.IsFalse(SoundComparer.AreSame("", "AAAAA"));
+
             Assert.IsTrue(SoundComparer.AreSame("Yiannis", "Giannis"));
             Assert.IsTrue(SoundComparer.AreSame("ΕΛΕΟΣ", "ELEOC"));
             Assert.IsTrue(SoundComparer.AreSame("ΕΛΕΟΣ", "eLe0C"));
@@ -96,10 +101,21 @@ namespace Test
 
             Assert.IsTrue(SoundComparer.StartsWith("Babis", "Μπάμπ"));
             Assert.IsTrue(SoundComparer.StartsWith("Babis", "Μπάμ"));
-            Assert.IsTrue(SoundComparer.StartsWith("Babis", "Μπά"));
+            Assert.IsTrue(SoundComparer.StartsWith("Babis", "Μ"));
             Assert.IsTrue(SoundComparer.StartsWith("Αθήνα", "athin"));
             Assert.IsTrue(SoundComparer.StartsWith("Αθήνα", "ath"));
             Assert.IsTrue(SoundComparer.StartsWith("Αθήνα", "at"));
+
+            Assert.IsTrue(SoundComparer.StartsWith("Athena", "Αθήνα"));
+            Assert.IsTrue(SoundComparer.StartsWith("Athena", "Αθήν"));
+            Assert.IsTrue(SoundComparer.StartsWith("Athena", "Αθή"));
+            Assert.IsTrue(SoundComparer.StartsWith("Athena", "Αθ"));
+            Assert.IsTrue(SoundComparer.StartsWith("Athena", "Α"));
+
+            Assert.IsTrue(SoundComparer.StartsWith("Anthropoi", "Άνθρωποι"));
+            Assert.IsTrue(SoundComparer.StartsWith("Anthropoi", "Άνθρωπο"));
+            Assert.IsTrue(SoundComparer.StartsWith("Anthropoi", "Άνθρωπ"));
+            Assert.IsTrue(SoundComparer.StartsWith("Anthropoi", "Άνθρω"));
 
             Assert.IsFalse(SoundComparer.StartsWith("Μπά", "Babis"));
 
