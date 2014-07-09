@@ -87,6 +87,18 @@ namespace GreeklishSoundComparer
             doubleSounds["ΚΣ"] = XI;
             doubleSounds["ΠΣ"] = PSI;
 
+			/// Spelling ignoring rules
+			doubleSounds["NN"] = NI;
+            doubleSounds["SS"] = SIGMA;
+			doubleSounds["LL"] = LAMBDA;
+            doubleSounds["RR"] = RO;
+			
+			doubleSounds["ΝΝ"] = NI;
+            doubleSounds["ΣΣ"] = SIGMA;
+			doubleSounds["ΛΛ"] = LAMBDA;
+            doubleSounds["ΡΡ"] = RO;
+			
+			
             /// English Sounds
             singleSounds['Q'] = KAPPA;
             singleSounds['8'] = THITA;
@@ -112,6 +124,7 @@ namespace GreeklishSoundComparer
             singleSounds['L'] = LAMBDA;
             singleSounds['Z'] = ZITA;
             singleSounds['X'] = string.Concat(HI,',',XI);
+			singleSounds['3'] = XI;
             singleSounds['C'] = string.Concat(KAPPA,',',SIGMA);
             singleSounds['V'] = BETA;
             singleSounds['B'] = string.Concat(BETA,',',BI);
@@ -130,8 +143,11 @@ namespace GreeklishSoundComparer
 
             accentCapitals['Ά'] = ALPHA;
             accentCapitals['Ί'] = IOTA;
+			accentCapitals['ΐ'] = IOTA;
+			accentCapitals['Ϊ'] = IOTA;
             accentCapitals['Ό'] = OMIKRON;
             accentCapitals['Ύ'] = IOTA;
+			accentCapitals['Ϋ'] = IOTA;
             accentCapitals['Ή'] = IOTA;
             accentCapitals['Έ'] = EPSILON;
             accentCapitals['Ώ'] = OMIKRON;
